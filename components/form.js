@@ -1,4 +1,17 @@
 import renderToDOM from '../utils/renderToDOM';
+import houses from '../utils/sample_data/data';
+import studentsOnDom from '../utils/studentsOnDom';
+
+const students = [];
+
+// Create a new ID for the students
+const createId = (array) => {
+  if (array.length) {
+    const idArray = array.map((el) => el.id);
+    return Math.max(...idArray) + 1;
+  }
+  return 0;
+};
 
 const sortStudent = (e) => {
   e.preventDefault();
